@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= title
+
+    .form-container
+      a.return-link(href="/") Return to the homepage
+
+      form(action="/update-cobj", method="post")
+        div
+          label(for="name") Name:
+          input(type="text", id="name", name="name", required)
+        div
+          label(for="company") Company:
+          input(type="text", id="company", name="company")
+        div
+          label(for="codename") Codename:
+          input(type="text", id="codename", name="codename")
+        div
+          button(type="submit") Submit

@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= title
+    a(href="/update-cobj") Add to this table
+
+    if error
+      p(style="color:red") Error: #{error}
+    else if data && data.length
+      table
+        thead
+          tr
+            th ID
+            th Name
+            th Company
+            th Codename
+        tbody
+          each record in data
+            tr
+              td= record.id
+              td= record.properties.name || '-'
+              td= record.properties.company || '-'
+              td= record.properties.codename || '-'
+    else
+      p No records found. Use "Add to this table" to create one.
