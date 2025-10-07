@@ -11,14 +11,15 @@ html
       a.return-link(href="/") Return to the homepage
 
       form(action="/update-cobj", method="post")
-        div
-          label(for="name") Name:
-          input(type="text", id="name", name="name", required)
-        div
-          label(for="company") Company:
-          input(type="text", id="company", name="company")
-        div
-          label(for="codename") Codename:
-          input(type="text", id="codename", name="codename")
-        div
+        .form-grid
+          .form-field
+            label(for="name") Name
+            input(type="text", id="name", name="name", required)
+          .form-field
+            label(for="company") Company
+            input(type="text", id="company", name="company", required)
+          .form-field
+            label(for="codename") Codename
+            input(type="text", id="codename", name="codename", required)
+        .form-actions
           button(type="submit") Submit

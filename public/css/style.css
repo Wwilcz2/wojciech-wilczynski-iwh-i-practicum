@@ -58,6 +58,50 @@ table.data-table tbody tr:nth-child(even) td {
     background: #fcfcfd;
 }
 
+.form-container {
+    max-width: 960px;
+    margin: 0 auto 3rem auto;
+    padding: 0 1rem;
+}
+
+.form-container h2 {
+    margin: 0 0 1rem 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: .25rem;
+    font-weight: 500;
+}
+
+.form-field input[type="text"] {
+    width: 100%;
+    padding: .5rem .625rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 .cards {
     display: flex;
     align-items: center;

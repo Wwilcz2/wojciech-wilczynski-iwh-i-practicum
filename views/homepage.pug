@@ -7,7 +7,7 @@ html
   body
     .page-header
       h1= title
-      a.button(href="/update-cobj") Add to this table
+      
 
     if error
       p(style="color:red") Error: #{error}
@@ -28,4 +28,21 @@ html
                 td= record.properties.company || '-'
                 td= record.properties.codename || '-'
     else
-      p No records found. Use "Add to this table" to create one.
+      p No records found. Use the form below to create one.
+
+    // Add form under the table
+    .form-container
+      h2 Add a new record
+      form(action="/update-cobj", method="post")
+        .form-grid
+          .form-field
+            label(for="name") Name
+            input(type="text", id="name", name="name", required)
+          .form-field
+            label(for="company") Company
+            input(type="text", id="company", name="company", required)
+          .form-field
+            label(for="codename") Codename
+            input(type="text", id="codename", name="codename", required)
+        .form-actions
+          button(type="submit") Submit
